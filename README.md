@@ -1,24 +1,12 @@
-# README
+# TestGuru
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application allows you to create, manage and run tests.
+Designed as part of Thinknetica courses.
 
-Things you may want to cover:
+Main objects:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Users
+* Tests
+* Questions
+* Answers
+* Results

@@ -44,3 +44,9 @@ answers = Answer.create!([
   { body: 'Netscape', correct: true, question_id: questions[4].id },
   { body: 'IBA', correct: false, question_id: questions[4].id }
 ])
+
+user_passed_tests = UserPassedTest.create!([
+  { user_id: users[0].id, test_id: tests[0].id },
+  { user_id: users[0].id, test_id: tests[3].id },
+  { user_id: users[2].id, test_id: tests[3].id }
+])

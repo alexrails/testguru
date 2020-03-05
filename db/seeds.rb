@@ -18,10 +18,10 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  { title: 'Ruby', level: 5, category_id: categories[0].id },
-  { title: 'HTML', level: 1, category_id: categories[1].id },
-  { title: 'Postresql', level: 7, category_id: categories[2].id },
-  { title: 'Javascript', level: 5, category_id: categories[1].id }
+  { title: 'Ruby', level: 5, category_id: categories[0].id, user_id: users[0].id },
+  { title: 'HTML', level: 1, category_id: categories[1].id, user_id: users[0].id },
+  { title: 'Postresql', level: 7, category_id: categories[2].id, user_id: users[1].id },
+  { title: 'Javascript', level: 5, category_id: categories[1].id, user_id: users[2].id }
 ])
 
 questions = Question.create!([

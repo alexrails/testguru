@@ -8,6 +8,6 @@ class Answer < ApplicationRecord
   private
 
   def validate_count_answers
-    errors.add(:answers_limit, "Maximum 4 symbols") if question.answers.count > 4
+    errors.add(:answers_limit, "Maximum 4 answers") if question.answers.count >= 4
   end
 end

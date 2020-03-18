@@ -1,0 +1,11 @@
+<%= form_with model: [@test, @question], local: true do |f| %>
+
+  <%= render 'errors' %>
+
+  <p>
+    <%= f.label "Question's body" %>
+    <%= f.text_field :body, id: 'question[body]' %>
+  </p>
+
+  <p><%= f.submit %></p>
+<% end %>

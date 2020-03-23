@@ -1,6 +1,6 @@
 class TestsController < ApplicationController
 #  before_action :find_question, only: %i[show destroy]
-  before_action :find_test, only: %i[show destroy]
+  before_action :find_test, only: %i[show destroy edit]
 
   def index
     @tests = Test.all
@@ -8,6 +8,13 @@ class TestsController < ApplicationController
 
   def new
     @test = Test.new
+  end
+
+  def show
+  end
+
+  def edit
+
   end
 
   def create
@@ -20,7 +27,8 @@ class TestsController < ApplicationController
     end
   end
 
-  def show
+  def update
+
   end
 
   def destroy

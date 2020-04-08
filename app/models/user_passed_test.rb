@@ -4,7 +4,6 @@ class UserPassedTest < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_first_question, on: :create
-  #before_save :before_save_set_next_question
 
   DONE_PERCENT = 85
 
@@ -29,6 +28,10 @@ class UserPassedTest < ApplicationRecord
     true if result >= DONE_PERCENT
   end
 
+  def current_question_number
+    test.questions.count - test.questions.order(:id).where('id > ?', current_question.id).count
+  end
+
   private
 
   def before_validation_set_first_question
@@ -39,16 +42,8 @@ class UserPassedTest < ApplicationRecord
     end
   end
 
- # def before_save_set_next_question
-  #  self.current_question = next_question
- # end
-
   def correct_answer?(answer_ids)
     correct_answers.ids.sort == answer_ids.map(&:to_i).sort
-    #correct_answers_count = correct_answers.count
-
-   # (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
-   # correct_answers_count == answer_ids.count
   end
 
   def correct_answers

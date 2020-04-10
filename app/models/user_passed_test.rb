@@ -25,7 +25,7 @@ class UserPassedTest < ApplicationRecord
   end
 
   def success?
-    true if result >= DONE_PERCENT
+    result >= DONE_PERCENT
   end
 
   def current_question_number

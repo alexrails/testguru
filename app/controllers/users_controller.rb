@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-  attr_reader :password
-  attr_writer :password_confirmation
-
   def new
     @user = User.new
   end
@@ -16,18 +13,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def password=(password_string)
-    if password_string.nil?
-      self.password_digest = nil
-    elsif password_string.present?
-      @password = password_string
-      self.password_digest = digest(password_string)
-    end
-  end
-
-  private
+    private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end

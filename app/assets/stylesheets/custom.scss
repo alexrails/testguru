@@ -1,0 +1,23 @@
+header {
+  background: #333;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: #fff;
+  height: 70px;
+}
+
+#logo {
+  float: left;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.7em;
+  padding-left: 10px;
+}
+
+.nav li {
+  float: right;
+  padding: 10px;
+  a {
+    color: #fff;
+  }
+}

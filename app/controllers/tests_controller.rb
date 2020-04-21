@@ -2,6 +2,7 @@ class TestsController < ApplicationController
 #  before_action :find_question, only: %i[show destroy]
   before_action :find_test, only: %i[start show destroy edit update]
   before_action :set_user, only: :start
+
   def index
     @tests = Test.all
   end
@@ -56,6 +57,6 @@ class TestsController < ApplicationController
   end
 
   def set_user
-    @user = User.first
+    @user = current_user
   end
 end

@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
-      cookies[:previous_page] = request.url
+      cookies[:target_page] = request.url
       redirect_to login_path, alert: 'Are you Guru? Verify your Email and Password!'
     end
   end

@@ -1,5 +1,6 @@
 class UserPassedTestsController < ApplicationController
 
+  before_action :authenticate_user!
   before_action :set_user_passed_test, only: %i[result show update destroy]
 
   def show
@@ -12,6 +13,7 @@ class UserPassedTestsController < ApplicationController
     @user_passed_test.accept!(params[:answer_ids])
 
     if @user_passed_test.completed?
+      TestsMailer.completed_test(@user_passed_test).deliver_now
       redirect_to result_user_passed_test_path(@user_passed_test)
     else
       render :show

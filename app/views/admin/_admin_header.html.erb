@@ -1,0 +1,12 @@
+<header class='navbar'>
+  <div class='container'>
+    <%= link_to "TestGuru Admin Panel", root_path, id: :logo %>
+    <nav>
+      <ul class='nav'>
+        <li><%= link_to 'Join to Guru', new_user_registration_path %></li>
+        <li><%= link_to 'Log in', new_user_session_path %></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -6,9 +6,6 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_params, if: :devise_controller?
   before_action :set_locale
 
-  def default_url_options
-    { lang: I18n.locale }
-  end
 
   private
 
@@ -22,5 +19,9 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_params
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[first_name last_name])
+  end
+
+  def default_url_options
+    I18n.locale != I18n.default_locale ? { lang: I18n.locale } : {}
   end
 end

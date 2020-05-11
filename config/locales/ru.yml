@@ -15,12 +15,21 @@ ru:
         create: "Создать Тест"
         update: "Обновить Тест"
         show: "Показать"
-
+      user:
+        create: "Стать Гуру"
+        update: "Обновить"
+      session:
+        create: "Вход"
     label:
       test:
         title: "Название теста"
         level: "Сложность"
         category_id: "Категория"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
 
   user_passed_tests:
     points:
@@ -85,7 +94,6 @@ ru:
           one: "Обанружено %{count} ошибка"
           other: "Обанружено %{count} ошибки"
 
-
   navigate:
     show: "Просмотреть"
     edit: "Редактировать"
@@ -94,4 +102,12 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  devise:
+    shared:
+      links:
+        log_in: "Вход"
+        confirmation: "Не получили сообщение о подтверждении регистрации?"
+        sign_up: "Стать Гуру"
+        forgot: "Забыл пароль?"
 

@@ -3,9 +3,9 @@
     <%= link_to "TestGuru", root_path, id: :logo %>
     <nav>
       <ul class='nav'>
-        <li><%= link_to 'Join to Guru', new_user_registration_path %></li>
-        <li><%= link_to 'Log in', new_user_session_path %></li>
-        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to t('navbar.join_to_guru'), new_user_registration_path %></li>
+        <li><%= link_to t('navbar.login'), new_user_session_path %></li>
+        <li><%= link_to t('navbar.logout'), destroy_user_session_path, method: :delete %></li>
       </ul>
     </nav>
   </div>

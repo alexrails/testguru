@@ -31,3 +31,94 @@
 
 en:
   hello: "Hello world"
+
+  layouts:
+    application:
+      welcome: "Welcome, %{name} Guru"
+      logout: "Logout"
+    admin:
+      welcome: "Welcome, %{name} Guru"
+      logout: "Logout"
+
+  user_passed_tests:
+    points:
+      header_fail: "Test %{title} failed!"
+      header_success: "Test %{title} was successfully done!"
+      result: "Your result is %{value}"
+    result:
+      all_tests: "All tests"
+    show:
+      submit: "Next"
+      passing: "The %{title} test"
+      from: "%{current_number} from %{total_number}"
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      question_count: "Question count"
+      actions: "Actions"
+    test:
+      start: "Start"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
+  navbar:
+    join_to_guru: "Join to Guru"
+    login: "Login"
+    logout: "Logout"
+
+  admin:
+    tests:
+      update:
+        success: "Test was successfully updated."
+      create:
+        success: "Test was successfully created."
+      destroy:
+        success: "Test was successfuly deleted"
+      index:
+        header: "Tricky Tests"
+        title: "Title"
+        level: "Level"
+        question_count: "Question count"
+        actions: "Actions"
+        new_test: "New test"
+      show:
+        header1: "Test"
+        header2: "Test level:"
+        new_question: "New question"
+        question: "Question"
+        action: "Action"
+      edit:
+        header: "Edit Test"
+        p:
+          back: "Back"
+      new:
+        header: "Create new test"
+        p:
+          back: "Back"
+      errors:
+        header:
+          one: "%{count} error detected"
+          other: "%{count} errors detected"
+
+  navigate:
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+

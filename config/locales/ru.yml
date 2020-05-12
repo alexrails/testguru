@@ -1,0 +1,113 @@
+ru:
+  hello: "Привет мир"
+
+  layouts:
+    application:
+      welcome: "Добро пожаловать, %{name} Гуру"
+      logout: "Выход"
+    admin:
+      welcome: "Добро пожаловать, %{name} Гуру"
+      logout: "Выход"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+        show: "Показать"
+      user:
+        create: "Стать Гуру"
+        update: "Обновить"
+      session:
+        create: "Вход"
+    label:
+      test:
+        title: "Название теста"
+        level: "Сложность"
+        category_id: "Категория"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+
+  user_passed_tests:
+    points:
+      header_fail: "Тест %{title} провален!"
+      header_success: "Тест %{title} успешно пройден!"
+      result: "Ваш результат %{value}"
+    result:
+      all_tests: "Все тесты"
+    show:
+      submit: "Следующий"
+      passing: "%{title} тест"
+      from: "%{current_number} из %{total_number}"
+
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: "Название"
+      level: "Сложность"
+      question_count: "Кол-во вопросов"
+      actions: "Действия"
+    test:
+      start: "Начать"
+
+  navbar:
+    join_to_guru: "Стань Гуру"
+    login: "Вход"
+    logout: "Выход"
+
+  admin:
+    tests:
+      update:
+        success: "Тест был успешно обновлен."
+      create:
+        success: "Тест был успешно создан."
+      destroy:
+        success: "Тест успешно удален."
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Сложность"
+        question_count: "Кол-во вопросов"
+        actions: "Действия"
+        new_test: "Создать тест"
+      show:
+        header1: "Тест"
+        header2: "Сложность:"
+        new_question: "Новый вопрос"
+        question: "Вопрос"
+        action: "Действия"
+      edit:
+        header: "Редактировать тест"
+        p:
+          back: "Назад"
+      new:
+        header: "Создать тест"
+        p:
+          back: "Назад"
+      errors:
+        header:
+          few: "Обнаружено %{count} ошибки"
+          many: "Обнаружено %{count} ошибок"
+          one: "Обанружено %{count} ошибка"
+          other: "Обанружено %{count} ошибки"
+
+  navigate:
+    show: "Просмотреть"
+    edit: "Редактировать"
+    delete: "Удалить"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
+
+  devise:
+    shared:
+      links:
+        log_in: "Вход"
+        confirmation: "Не получили сообщение о подтверждении регистрации?"
+        sign_up: "Стать Гуру"
+        forgot: "Забыл пароль?"
+

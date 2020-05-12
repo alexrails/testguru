@@ -1,5 +1,5 @@
-<h1>Passing the <%= @user_passed_test.test.title %> test</h1>
-<p><%= @user_passed_test.current_question_number %> from <%= @user_passed_test.test.questions.count %></p>
+<h1><%= t('.passing', title: @user_passed_test.test.title) %></h1>
+<p><%= t('.from', current_number: @user_passed_test.current_question_number, total_number: @user_passed_test.test.questions.count) %></p>
 
 <b>
   <%= @user_passed_test.current_question.body %>
@@ -12,6 +12,6 @@
       <%= b.label %>
     </p>
   <% end %>
-  <p><%= form.submit 'Next' %></p>
+  <p><%= form.submit t('.submit') %></p>
 
 <% end %>

@@ -1,0 +1,17 @@
+en:
+  activerecord:
+    models:
+      test: "Test"
+
+    attributes:
+      test:
+        title: "Title"
+        author: "Author"
+        level: "Level"
+        category: "Category"
+
+    errors:
+      messages:
+        blank: "can't be blank"
+        required: "must exist"
+        greater_than: "must be greater than 0"

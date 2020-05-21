@@ -1,7 +1,7 @@
-<% if @user_passed_test.success? %>
-  <h1><%= t('.header_success', title: @user_passed_test.test.title) %></h1>
-  <p class='success'><%= t('.result', value: @user_passed_test.result) %>%</p>
-<% else %>
-  <h1><%= t('.header_fail', title: @user_passed_test.test.title) %> Test was failed!</h2>
-  <p class='fail'><%= t('.result', value: @user_passed_test.result) %>%</p>
-<% end %>
+  <% if @user_passed_test.success? %>
+    <h2><%= t('.header_success', title: @user_passed_test.test.title) %></h2>
+    <p class='success'><%= t('.result', value: @user_passed_test.result) %>%</p>
+  <% else %>
+    <h2><%= t('.header_fail', title: @user_passed_test.test.title) %> Test was failed!</h2>
+    <p class='fail'><%= t('.result', value: @user_passed_test.result) %>%</p>
+  <% end %>

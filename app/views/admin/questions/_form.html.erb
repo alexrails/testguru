@@ -1,13 +1,14 @@
-<h1><%= question_header(@question) %></h1>
+<h3><%= question_header(@question) %></h3>
 
 <%= form_with model: [:admin, @test, @question], local: true do |f| %>
 
   <%= render 'errors' %>
+  <div class="form-group">
+    <p>
+      <%= f.label "Question's body" %>
+      <%= f.text_field :body, id: 'question[body]', class: 'form-control' %>
+    </p>
 
-  <p>
-    <%= f.label "Question's body" %>
-    <%= f.text_field :body, id: 'question[body]' %>
-  </p>
-
-  <p><%= f.submit %></p>
+    <p><%= f.submit class: 'btn btn-light' %></p>
+  </div>
 <% end %>

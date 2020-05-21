@@ -5,6 +5,9 @@
       <ul class='nav'>
         <% if user_signed_in? %>
           <li>
+            <% if current_user.admin? %>
+              <%= link_to t('.admin_panel'), admin_tests_path %> |
+            <% end %>
             <%= t('.welcome', name: current_user.first_name) %> |
             <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
           </li>

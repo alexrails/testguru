@@ -5,6 +5,7 @@ ru:
     header:
       welcome: "Добро пожаловать, %{name} Гуру"
       logout: "Выход"
+      admin_panel: "Панель администратора"
     admin:
       welcome: "Добро пожаловать, %{name} Гуру"
       logout: "Выход"

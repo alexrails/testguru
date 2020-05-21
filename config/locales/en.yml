@@ -36,6 +36,7 @@ en:
     header:
       welcome: "Welcome, %{name} Guru"
       logout: "Logout"
+      admin_panel: "Admin panel"
     admin:
       welcome: "Welcome, %{name} Guru"
       logout: "Logout"

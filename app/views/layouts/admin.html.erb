@@ -11,16 +11,10 @@
 
   <body>
     <%= render 'admin/admin_header' %>
-
-    <% if user_signed_in? %>
-      <p class="nav user">
-        <%= t('.welcome', name: current_user.first_name) %> |
-        <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
-      </p>
-    <% end %>
-
+    <div class="container">
     <%= render 'layouts/flash' %>
     <%= yield %>
+  </div>
     <%= render 'layouts/footer' %>
   </body>
 </html>

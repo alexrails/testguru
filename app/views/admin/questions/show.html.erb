@@ -1,11 +1,11 @@
-<h1>Question #<%= @question.id%></h1>
-<p><%= @question.body %></p>
-
-<h2>Answers</h2>
-<p><%= link_to 'New answers', new_admin_question_answer_path(@question) %></p>
-<ol>
+<h3>Question #<%= @question.id%></h3>
+<b><%= @question.body %></b>
+<hr class="my-4">
+<b>Answers</b>
+<p><%= link_to 'New answers', new_admin_question_answer_path(@question), class: 'btn btn-light' %></p>
+<ol class="list-group list-group-flush">
   <%= render @question.answers %>
 </ol>
 
-<p><%= link_to 'Edit', edit_admin_question_path(@question) %>
-   <%= link_to 'Back', admin_test_path(@question.test) %></p>
+<p><%= link_to 'Edit', edit_admin_question_path(@question), class: 'btn btn-secondary' %>
+   <%= link_to 'Back', admin_test_path(@question.test), class: 'btn btn-secondary' %></p>

@@ -33,9 +33,10 @@ en:
   hello: "Hello world"
 
   layouts:
-    application:
+    header:
       welcome: "Welcome, %{name} Guru"
       logout: "Logout"
+      admin_panel: "Admin panel"
     admin:
       welcome: "Welcome, %{name} Guru"
       logout: "Logout"
@@ -89,6 +90,9 @@ en:
     logout: "Logout"
 
   admin:
+    admin_header:
+      welcome: "Welcome, %{name} Guru"
+      logout: "Logout"
     tests:
       update:
         success: "Test was successfully updated."

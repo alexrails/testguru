@@ -3,10 +3,20 @@
     <%= link_to "TestGuru", root_path, id: :logo %>
     <nav>
       <ul class='nav'>
-        <li><%= link_to t('navbar.join_to_guru'), new_user_registration_path %></li>
-        <li><%= link_to t('navbar.login'), new_user_session_path %></li>
-        <li><%= link_to t('navbar.logout'), destroy_user_session_path, method: :delete %></li>
+        <% if user_signed_in? %>
+          <li>
+            <% if current_user.admin? %>
+              <%= link_to t('.admin_panel'), admin_tests_path %> |
+            <% end %>
+            <%= t('.welcome', name: current_user.first_name) %> |
+            <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+          </li>
+        <% else %>
+          <li><%= link_to t('navbar.join_to_guru'), new_user_registration_path %></li>
+          <li><%= link_to t('navbar.login'), new_user_session_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>
 </header>
+

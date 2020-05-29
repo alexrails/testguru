@@ -43,6 +43,9 @@ ru:
       submit: "Следующий"
       passing: "%{title} тест"
       from: "%{current_number} из %{total_number}"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения Gist произошла ошибка!"
 
   tests:
     index:

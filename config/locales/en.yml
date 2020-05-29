@@ -52,6 +52,9 @@ en:
       submit: "Next"
       passing: "The %{title} test"
       from: "%{current_number} from %{total_number}"
+    gist:
+      success: "Gist saved!"
+      failure: "An error occurred while saving!"
 
   tests:
     index:

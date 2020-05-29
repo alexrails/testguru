@@ -3,9 +3,9 @@
     <h1 class="display-5"><%= t('.passing', title: @user_passed_test.test.title) %></h1>
     <p class="lead"><%= t('.from', current_number: @user_passed_test.current_question_number, total_number: @user_passed_test.test.questions.count) %></p>
     <hr class="my-4">
-    <b>
-      <%= @user_passed_test.current_question.body %>
-    </b>
+    <p>
+      <b><%= @user_passed_test.current_question.body %></b>
+    </p>
 
     <%= form_with url: user_passed_test_path(@user_passed_test), local: true, method: :put do |form| %>
       <%= form.collection_check_boxes :answer_ids, @user_passed_test.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -15,6 +15,7 @@
         </div>
       <% end %>
       <hr class="my-4">
+      <p><%= link_to 'Gist question', gist_user_passed_test_path(@user_passed_test), method: :post %></p>
       <p><%= form.submit t('.submit'), class: 'btn btn-light' %></p>
     <% end %>
   </div>

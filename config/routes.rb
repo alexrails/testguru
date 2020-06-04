@@ -25,4 +25,8 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  namespace :admin do
+    resources :gists, shallow: true
+  end
 end

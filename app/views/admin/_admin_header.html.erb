@@ -7,6 +7,7 @@
           <p class="nav user">
             <%= t('.welcome', name: current_user.first_name) %> |
             <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+            <%= link_to 'Gists', admin_gists_path %>
           </p>
         <% else %>
           <li><%= link_to t('navbar.join_to_guru'), new_user_registration_path %></li>

@@ -100,6 +100,11 @@ ru:
           many: "Обнаружено %{count} ошибок"
           one: "Обанружено %{count} ошибка"
           other: "Обанружено %{count} ошибки"
+    gists:
+      index:
+        question: "Вопрос"
+        url: "Cсылка"
+        user: "Пользователь"
 
   navigate:
     show: "Просмотреть"

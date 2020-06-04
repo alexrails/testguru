@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :user_passed_tests
   has_many :tests, through: :user_passed_tests
   has_many :author_tests, class_name: "Test"
+  has_many :gists
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 80 },

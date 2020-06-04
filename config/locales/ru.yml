@@ -44,7 +44,7 @@ ru:
       passing: "%{title} тест"
       from: "%{current_number} из %{total_number}"
     gist:
-      success: "Gist успешно сохранен!"
+      success: "Gist успешно сохранен! | %{url}"
       failure: "Во время сохранения Gist произошла ошибка!"
 
   tests:
@@ -118,3 +118,6 @@ ru:
         sign_up: "Стать Гуру"
         forgot: "Забыл пароль?"
 
+  services:
+    gist_params:
+      description: "Вопрос о %{title} в TestGuru"

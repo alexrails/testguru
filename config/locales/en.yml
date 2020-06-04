@@ -145,3 +145,7 @@ en:
         confirmation: "Don't receive confirmations instruction?"
         sign_up: "Sign up"
         forgot: "Forgot your password?"
+
+  services:
+    gist_params:
+      description: "A question about %{title} from TestGuru"

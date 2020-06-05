@@ -43,6 +43,9 @@ ru:
       submit: "Следующий"
       passing: "%{title} тест"
       from: "%{current_number} из %{total_number}"
+    gist:
+      success: "Gist успешно сохранен! | %{url}"
+      failure: "Во время сохранения Gist произошла ошибка!"
 
   tests:
     index:
@@ -97,6 +100,11 @@ ru:
           many: "Обнаружено %{count} ошибок"
           one: "Обанружено %{count} ошибка"
           other: "Обанружено %{count} ошибки"
+    gists:
+      index:
+        question: "Вопрос"
+        url: "Cсылка"
+        user: "Пользователь"
 
   navigate:
     show: "Просмотреть"
@@ -115,3 +123,6 @@ ru:
         sign_up: "Стать Гуру"
         forgot: "Забыл пароль?"
 
+  services:
+    gist_params:
+      description: "Вопрос о %{title} в TestGuru"

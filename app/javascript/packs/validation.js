@@ -10,7 +10,11 @@ function password_validate() {
   var password = document.querySelector('.password')
   var password_confirmation = document.querySelector('.password_confirmation')
 
-  if (password_confirmation.value != "") {
+  if (password_confirmation.value == "") {
+    document.querySelector('.octicon-check').classList.add('hide')
+    document.querySelector('.octicon-issue-opened').classList.add('hide')
+    return 0
+  }
     if (password.value == password_confirmation.value) {
       document.querySelector('.octicon-check').classList.remove('hide')
       document.querySelector('.octicon-issue-opened').classList.add('hide')
@@ -19,6 +23,6 @@ function password_validate() {
       document.querySelector('.octicon-issue-opened').classList.remove('hide')
       document.querySelector('.octicon-check').classList.add('hide')
     }
-  }
+
 }
 

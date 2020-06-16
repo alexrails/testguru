@@ -2,8 +2,10 @@ document.addEventListener('turbolinks:load', function() {
   var password = document.querySelector('.password')
   var password_confirmation = document.querySelector('.password_confirmation')
 
-  password.addEventListener('input', password_validate)
-  password_confirmation.addEventListener('input', password_validate)
+  if (password_confirmation) {
+    password.addEventListener('input', password_validate)
+    password_confirmation.addEventListener('input', password_validate)
+  }
 })
 
 function password_validate() {

@@ -3,6 +3,7 @@
 <p>
   <%= link_to t('.new_test'), new_admin_test_path, class: 'btn btn-light' %>
 </p>
+  <%= render 'layouts/errors', resource: @test %>
 <table class="table">
   <thead class="thead-dark">
     <tr class="text-center">

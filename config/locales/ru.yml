@@ -9,6 +9,8 @@ ru:
     admin:
       welcome: "Добро пожаловать, %{name} Гуру"
       logout: "Выход"
+    errors:
+      header: "Обнаружена ошибка"
 
   helpers:
     submit:
@@ -69,6 +71,10 @@ ru:
     tests:
       update:
         success: "Тест был успешно обновлен."
+      update_inline:
+        success: "Тест был успешно обновлен."
+      form_inline:
+        submit: "OK"
       create:
         success: "Тест был успешно создан."
       destroy:

@@ -1,7 +1,16 @@
 <div class="justify-content-center mt-3">
   <div class="col col-md-4">
     <h1 class="display-5"><%= t('.passing', title: @user_passed_test.test.title) %></h1>
-    <p class="lead"><%= t('.from', current_number: @user_passed_test.current_question_number, total_number: @user_passed_test.test.questions.count) %></p>
+    <p class="lead"><%= t('.from', current_number: @user_passed_test.current_question_number,
+                          total_number: @user_passed_test.test.questions.count) %></p>
+    <div class="progress">
+      <%= content_tag :div, "", class: 'progress-bar',
+                 data: { current_number: @user_passed_test.current_question_number,
+                 total_number: @user_passed_test.test.questions.count },
+                 role: 'progressbar',
+                 value: @user_passed_test.current_question_number,
+                 max: @user_passed_test.test.questions.count %>
+    </div>
     <hr class="my-4">
     <p>
       <b><%= @user_passed_test.current_question.body %></b>
@@ -16,7 +25,7 @@
       <% end %>
       <hr class="my-4">
       <p><%= link_to 'Gist question', gist_user_passed_test_path(@user_passed_test), method: :post %></p>
-      <p><%= form.submit t('.submit'), class: 'btn btn-light' %></p>
+      <p><%= form.submit t('.submit'), class: 'btn btn-light next' %></p>
     <% end %>
   </div>
 </div>

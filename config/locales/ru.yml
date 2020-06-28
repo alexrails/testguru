@@ -1,6 +1,12 @@
 ru:
   hello: "Привет мир"
 
+  feedbacks:
+    new:
+      header: "Обратная связь"
+    create:
+      success: "Вы успешно оставили отзыв"
+
   layouts:
     header:
       welcome: "Добро пожаловать, %{name} Гуру"
@@ -23,6 +29,8 @@ ru:
         update: "Обновить"
       session:
         create: "Вход"
+      feedback:
+        create: "Отправить"
     label:
       test:
         title: "Название теста"
@@ -33,6 +41,9 @@ ru:
         last_name: "Фамилия"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
+      feedback:
+        title: "Тема"
+        body: "Сообщение"
 
   user_passed_tests:
     points:
@@ -63,6 +74,7 @@ ru:
     join_to_guru: "Стань Гуру"
     login: "Вход"
     logout: "Выход"
+    feedback: "Обратная связь"
 
   admin:
     admin_header:

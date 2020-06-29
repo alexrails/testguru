@@ -7,8 +7,12 @@ class TestsController < ApplicationController
   end
 
   def start
-    current_user.tests.push(@test)
-    redirect_to current_user.user_passed_test(@test)
+    if @test.questions.present?
+      current_user.tests.push(@test)
+      redirect_to current_user.user_passed_test(@test)
+    else
+      redirect_to root_path, alert: "Sorry, but this test has no questions!"
+    end
   end
 
   private

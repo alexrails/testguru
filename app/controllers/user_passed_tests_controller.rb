@@ -10,7 +10,7 @@ class UserPassedTestsController < ApplicationController
   end
 
   def update
-    @user_passed_test.accept!(params[:answer_ids])
+    @user_passed_test.accept!(params[:answer_ids]) if params[:answer_ids]
 
     if @user_passed_test.completed?
       TestsMailer.completed_test(@user_passed_test).deliver_now
@@ -40,4 +40,5 @@ class UserPassedTestsController < ApplicationController
   def set_user_passed_test
     @user_passed_test = UserPassedTest.find(params[:id])
   end
+
 end

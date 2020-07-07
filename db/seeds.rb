@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 users = User.create!([
-  { name: 'Alex', email: 'alex@gmail.com' },
-  { name: 'Jack', email: 'jack@example.com' },
-  { name: 'Johana', email: 'johana@yahoo.com' }
+  { first_name: 'Alex', last_name: 'Korzun', email: 'alex@gmail.com', password: 'password' },
+  { first_name: 'John', last_name: 'Doe', email: 'john@example.com', password: 'password', type: 'Admin' },
+  { first_name: 'Johana', last_name: 'Ivkis', email: 'johana@yahoo.com', password: 'password' }
 ])
 
 categories = Category.create!([
@@ -45,8 +45,8 @@ answers = Answer.create!([
   { body: 'IBA', correct: false, question_id: questions[4].id }
 ])
 
-user_passed_tests = UserPassedTest.create!([
-  { user_id: users[0].id, test_id: tests[0].id },
-  { user_id: users[0].id, test_id: tests[3].id },
-  { user_id: users[2].id, test_id: tests[3].id }
-])
+#user_passed_tests = UserPassedTest.create!([
+#  { user_id: users[0].id, test_id: tests[0].id },
+#  { user_id: users[0].id, test_id: tests[2].id },
+#  { user_id: users[2].id, test_id: tests[2].id }
+#])

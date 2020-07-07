@@ -32,6 +32,10 @@
 en:
   hello: "Hello world"
 
+  feedbacks:
+    new:
+      header: "Feedback"
+
   layouts:
     header:
       welcome: "Welcome, %{name} Guru"
@@ -78,6 +82,8 @@ en:
         update: "Update"
       session:
         create: "Log in"
+      feedback:
+        create: "Send"
     label:
       test:
         title: "Title"
@@ -88,11 +94,15 @@ en:
         last_name: "Last name"
         password: "Password"
         password_confirmation: "Password confirmation"
+      feedback:
+        title: "Subject"
+        body: "Message"
 
   navbar:
     join_to_guru: "Join to Guru"
     login: "Login"
     logout: "Logout"
+    feedback: "Feedback"
 
   admin:
     admin_header:

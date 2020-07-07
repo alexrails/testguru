@@ -1,0 +1,17 @@
+<%= form_with model: @feedback, local: true do |f| %>
+  <%= render 'layouts/errors', resource: @feedback %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title, id: :feedback_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body, id: :feedback_body, rows: "10" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

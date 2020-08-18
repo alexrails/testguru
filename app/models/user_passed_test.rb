@@ -5,6 +5,9 @@ class UserPassedTest < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
 
+  scope :by_level, ->(level) { joins(:test).where(tests: { level: level }) }
+  scope :by_category, ->(category) { joins(:test).where(tests: { category: category }) }
+
   DONE_PERCENT = 85
 
   def completed?
@@ -30,6 +33,10 @@ class UserPassedTest < ApplicationRecord
 
   def current_question_number
     test.questions.count - test.questions.order(:id).where('id > ?', current_question.id).count
+  end
+
+  def done?
+    completed? && success?
   end
 
   private

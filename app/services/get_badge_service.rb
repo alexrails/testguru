@@ -22,7 +22,7 @@ class GetBadgeService
   end
 
   def first_try?
-    @user_passed_test.done? && @user.tests.where(id: @test.id).count = 1
+    @user_passed_test.done? && @user.tests.where(id: @test.id).count == 1
   end
 
   def level_complete?

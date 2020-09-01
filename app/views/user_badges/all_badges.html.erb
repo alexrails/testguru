@@ -1,0 +1,16 @@
+<div class="container">
+<h1><%= 'My Badges' %></h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr class="text-center">
+      <th scope="col">Title</th>
+      <th scope="col">Image</th>
+      <th scope="col">Rule</th>
+    </tr>
+  </thead>
+
+  <%= render @badges %>
+  <p><%= link_to 'Back', root_path %></p>
+</table>
+</div>

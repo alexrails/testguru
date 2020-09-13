@@ -12,11 +12,10 @@ class UserPassedTestsController < ApplicationController
   def update
     @user_passed_test.accept!(params[:answer_ids]) if params[:answer_ids]
 
-    if @user_passed_test.completed?
+    if @user_passed_test.done?
       badges = GetBadgeService.new(@user_passed_test).call
 
       if badges.present?
-        current_user.badges.push(badges)
         flash[:notice] = "You got a new achievement!"
       end
 

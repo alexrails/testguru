@@ -1,0 +1,19 @@
+<div class="container">
+<h1><%= 'Badges' %></h1>
+<p>
+  <%= link_to 'New badge', new_admin_badge_path, class: 'btn btn-light' %>
+</p>
+<table class="table">
+  <thead class="thead-dark">
+    <tr class="text-center">
+      <th scope="col">'ID'</th>
+      <th scope="col">'Title'</th>
+      <th scope="col">'Image'</th>
+      <th scope="col">'Rule'</th>
+    </tr>
+  </thead>
+
+  <%= render @badges %>
+
+  </table>
+</div>

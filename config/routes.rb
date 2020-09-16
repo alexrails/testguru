@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
   root 'tests#index'
 
+  get 'all_badges', to: 'user_badges#all_badges'
+
   resources :feedbacks, only: %i[new create]
+  resources :user_badges, only: %i[index]
 
   resources :tests, only: :index do
     member do
@@ -28,6 +31,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :badges
     resources :gists, shallow: true
   end
 end

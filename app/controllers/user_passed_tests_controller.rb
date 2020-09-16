@@ -12,7 +12,13 @@ class UserPassedTestsController < ApplicationController
   def update
     @user_passed_test.accept!(params[:answer_ids]) if params[:answer_ids]
 
-    if @user_passed_test.completed?
+    if @user_passed_test.done?
+      badges = GetBadgeService.new(@user_passed_test).call
+
+      if badges.present?
+        flash[:notice] = "You got a new achievement!"
+      end
+
       TestsMailer.completed_test(@user_passed_test).deliver_now
       redirect_to result_user_passed_test_path(@user_passed_test)
     else

@@ -17,4 +17,9 @@ class Test < ApplicationRecord
   def self.by_category(title)
     by_category(title).order(title: :desc).pluck(:title)
   end
+
+  def timer?
+    timer.positive?
+  end
+
 end

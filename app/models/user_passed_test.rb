@@ -39,6 +39,18 @@ class UserPassedTest < ApplicationRecord
     completed? && success?
   end
 
+  def time_left
+    (active_time - Time.current).to_i
+  end
+
+  def time_over?
+    Time.current > active_time
+  end
+
+  def active_time
+    created_at + test.timer.seconds
+  end
+
   private
 
   def before_validation_set_first_question

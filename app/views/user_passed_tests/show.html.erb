@@ -3,6 +3,11 @@
     <h1 class="display-5"><%= t('.passing', title: @user_passed_test.test.title) %></h1>
     <p class="lead"><%= t('.from', current_number: @user_passed_test.current_question_number,
                           total_number: @user_passed_test.test.questions.count) %></p>
+    <% if @user_passed_test.test.timer? %>
+      <p>
+        Time left: <%= content_tag :span, '', class: 'timer', data: { time: @user_passed_test.time_left } %>
+      </p>
+    <% end %>
     <div class="progress">
       <%= content_tag :div, "", class: 'progress-bar',
                  data: { current_number: @user_passed_test.current_question_number,

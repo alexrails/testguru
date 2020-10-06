@@ -12,7 +12,7 @@ class UserPassedTestsController < ApplicationController
   def update
     @user_passed_test.accept!(params[:answer_ids]) if params[:answer_ids]
 
-    if @user_passed_test.done?
+    if @user_passed_test.done? || @user_passed_test.time_over?
       badges = GetBadgeService.new(@user_passed_test).call
 
       if badges.present?
